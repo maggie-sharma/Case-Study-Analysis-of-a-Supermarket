@@ -91,7 +91,7 @@ scale_y_continuous(breaks = c(4,5.3,5.6,6.7,7.1,8.2,8.5,10)) + scale_fill_brewer
 ggplot(data = supermarket_data, mapping= aes(x = Rating, y = (supermarket_data$`gross income`))) + geom_smooth () + ggtitle("Relationship Between Gross Income related to Customer Rating", subtitle=paste0("Data from: ", mindate, " to ", maxdate)) + xlab("Customer Rating") + ylab("Gross Income")
 ```
 
-![](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/boxplot.png)
+![](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/smooth.png)
 
 ```{r}
 # Filtering dataset with a pipe to see each branch separately 
