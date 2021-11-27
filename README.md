@@ -1,18 +1,10 @@
 # Case-Study-Analysis-of-a-Supermarket
 This case study will utilize R and Tableau to analyze a supermarket's data
----
-title: "Data Analysis of a Supermarket in Myanmar"
-author: "Maggie Sharma"
-date: "11/26/2021"
-output:
-  word_document: default
-  html_document: default
-  pdf_document: default
----
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# "Data Analysis of a Supermarket in Myanmar"
+
+## Author: Maggie Sharma
+### Date: 11/26/2021
 
 # Purpose
 
