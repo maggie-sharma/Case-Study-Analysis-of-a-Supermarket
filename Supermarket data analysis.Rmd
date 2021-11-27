@@ -89,7 +89,7 @@ geom_hline(mapping = aes(yintercept = 7.1), linetype = "dashed") + geom_hline(ma
 geom_text(mapping = aes(x = "A", y = 7.5, label = "Yangon")) + geom_text(mapping = aes(x = "B", y = 7.5, label = "Mandalay")) + geom_text(mapping = aes(x = "C", y = 7.5, label = "Naypyitaw")) +
 scale_y_continuous(breaks = c(4,5.3,5.6,6.7,7.1,8.2,8.5,10)) + scale_fill_brewer(palette="Dark2")
 ```
-
+![](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/boxplot.png)
 
 ![Gross Income by Branch bar chart created on Tableau](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/Gross%20income%20by%20branch.png)
 
@@ -97,7 +97,7 @@ scale_y_continuous(breaks = c(4,5.3,5.6,6.7,7.1,8.2,8.5,10)) + scale_fill_brewer
 ggplot(data = supermarket_data, mapping= aes(x = Rating, y = (supermarket_data$`gross income`))) + geom_smooth () + ggtitle("Relationship Between Gross Income related to Customer Rating", subtitle=paste0("Data from: ", mindate, " to ", maxdate)) + xlab("Customer Rating") + ylab("Gross Income")
 ```
 
-
+![](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/boxplot.png)
 
 ```{r}
 # Filtering dataset with a pipe to see each branch separately 
@@ -144,7 +144,7 @@ p + facet_wrap(~supermarket_data$'Customer type') + scale_y_continuous(breaks = 
 
 
 ```
-
+![](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/genderbybranch.png)
 
 ![Product Line Breakdown by Gross Income and Gender created on Tableau](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/Gross%20Income%20by%20Product%20Line%20and%20Gender.png)
 
@@ -167,6 +167,8 @@ g <- ggplot(data = supermarket_data, mapping = aes(x = Branch)) + geom_bar(mappi
 theme_linedraw() + ggtitle("Distribution of Customers in Each Branch Based on Payment Mode",subtitle=paste0("Data from: ", mindate, " to ", maxdate))+ xlab("Branch") + ylab("Number of Customers") 
 g + facet_wrap(~supermarket_data$Payment) + scale_y_continuous(breaks = c(0, 25, 50, 75, 100, 125, 150, 175)) +scale_fill_brewer(palette="Paired")
 ```
+![](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/bypaymenttype.png) 
+
 ```{r}
 customer_type_total <- supermarket_data %>% count(`Customer type`)
 customer_type_total
@@ -203,6 +205,7 @@ ggplot(piechart_data, aes(x="", y=prop, fill=group)) +
   geom_text(aes(y = ypos, label = group), color = "white", size=6) +
   scale_fill_brewer(palette="Paired")
 ```
+![](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/piechart.png)
 
 ### Product and Payment Trends Summary 
 
