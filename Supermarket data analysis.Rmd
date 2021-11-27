@@ -27,7 +27,7 @@ This open dataset was obtained from Kaggle. [source](https://www.kaggle.com/aung
 
 # Analysis using R
 ## Preparing the Dataset
-```{r echo=TRUE, message=TRUE, warning=FALSE}
+```{r}
 # install packages
 install.packages("tidyverse")
 install.packages("RColorBrewer")
@@ -38,9 +38,9 @@ library("lubridate")
 
 ```
 
-```{r message=FALSE, warning=FALSE, `show_col_types = FALSE`}
+```{r}
 # Upload data
-supermarket_data <- read_csv("supermarket_store_sales.csv")
+supermarket_data <- read_csv("https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/supermarket_store_sales.csv")
 ```
 
 
@@ -91,7 +91,7 @@ scale_y_continuous(breaks = c(4,5.3,5.6,6.7,7.1,8.2,8.5,10)) + scale_fill_brewer
 ```
 
 
-![Gross Income by Branch bar chart created on Tableau](/cloud/project/Gross income by branch.png)
+![Gross Income by Branch bar chart created on Tableau](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/Gross%20income%20by%20branch.png)
 
 ```{r}
 ggplot(data = supermarket_data, mapping= aes(x = Rating, y = (supermarket_data$`gross income`))) + geom_smooth () + ggtitle("Relationship Between Gross Income related to Customer Rating", subtitle=paste0("Data from: ", mindate, " to ", maxdate)) + xlab("Customer Rating") + ylab("Gross Income")
@@ -146,10 +146,10 @@ p + facet_wrap(~supermarket_data$'Customer type') + scale_y_continuous(breaks = 
 ```
 
 
-![Product Line Breakdown by Gross Income and Gender created on Tableau](/cloud/project/Gross Income by Product Line and Gender.png)
+![Product Line Breakdown by Gross Income and Gender created on Tableau](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/Gross%20Income%20by%20Product%20Line%20and%20Gender.png)
 
 
-![Gross Profit by Product Line pie chart created on tableau](/cloud/project/Gross Income by Product Line.png)
+![Gross Profit by Product Line pie chart created on tableau](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/Gross%20Income%20by%20Product%20Line.png)
 
 ## Trends by Customer Gender Summary
 
@@ -172,7 +172,7 @@ customer_type_total <- supermarket_data %>% count(`Customer type`)
 customer_type_total
 ```
 
-![Payment Type and Customer Type chart created on Tableau](/cloud/project/Payment Type between customer type.png)
+![Payment Type and Customer Type chart created on Tableau](https://github.com/maggie-sharma/Case-Study-Analysis-of-a-Supermarket/blob/main/Payment%20Type%20between%20customer%20type.png)
 
 
 
